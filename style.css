@@ -1,0 +1,157 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Tan Nimbus";
+    font-weight: 800;
+    font-style: normal;
+    src: url("./fonts/TAN-NIMBUS.otf")
+}
+
+@font-face {
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    src: url("./fonts/PT-Mono.ttf")
+}
+
+@font-face {
+    font-family: "PT Mono";
+    font-weight: 700;
+    font-style: normal;
+    src: url("./fonts/PT-Mono-Bold.ttf")
+}
+
+
+
+
+/* Delcaring CSS Variables */
+
+:root {
+    --main-background-color: #DDDDDB;
+    --background-color: #21211D;
+    --brown-color: #755330;
+    --blue-color: #7CC0CB;
+}
+
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Setting Font Weights */
+
+h1 {
+    font-family: "gamay", "sans-serif";
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+h3 {
+    font-family: "gamay", "sans-serif";
+    font-weight: 500;
+    font-style: italic;
+}
+
+h4 {
+    font-family: "gamay", "sans-serif";
+    font-weight: 200;
+    font-style: italic;
+}
+
+p {
+    font-family: "PT Mono", "serif";
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Global Styles */
+
+
+body {
+    color: var(--main-background-color)
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.primary-background {
+    background-color: var(--main-background-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-background {
+    background-color: var(--background-color);
+    margin: 40px;
+    width: 100%;
+    border-radius: 25px;
+
+}
+
+ul {
+    list-style: none;
+    font-family: "gamay", "sans-serif";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+}
+
+li {
+    margin-right: 40px;
+}
+
+/* Navigation */
+
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+
+    
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.nav-center {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-logo {
+    height: 3.1rem;
+    width: auto;
+}
+
+.nav-right {
+    display: flex; 
+    gap: 5rem;
+}
+
+
