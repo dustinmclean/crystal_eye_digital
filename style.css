@@ -55,7 +55,12 @@ h1 {
     font-family: "gamay", "sans-serif";
     font-weight: 600;
     font-style: normal;
+}
 
+h2 {
+    font-family: "Tan Nimbus";
+    font-weight: 800;
+    font-style: normal;
 }
 
 h3 {
@@ -154,4 +159,17 @@ nav {
     gap: 5rem;
 }
 
+/* Main Body */
 
+.illustration {
+    max-width: 100%;
+    position: relative;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -3rem;
+}
