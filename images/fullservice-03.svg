@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3978.51 3974.07">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 131.8px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #dddddb;
+        font-family: GamayVF, 'Gamay Medium';
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: #dddddb;
+        stroke-miterlimit: 10;
+        stroke-width: 7.74px;
+      }
+
+      .cls-2 {
+        font-size: 96.43px;
+      }
+
+      .cls-7 {
+        fill: #7cc0cb;
+      }
+
+      .cls-3 {
+        font-size: 189.14px;
+      }
+
+      .cls-4 {
+        font-size: 170.64px;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-22 {
+        filter: url(#outer-glow-1);
+      }
+
+      .cls-22, .cls-23 {
+        fill: #21211d;
+      }
+
+      .cls-23 {
+        filter: url(#outer-glow-2);
+      }
+
+      .cls-24 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-31 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-32 {
+        letter-spacing: 0em;
+      }
+
+      .cls-33 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        font-size: 176.53px;
+      }
+    </style>
+    <filter id="outer-glow-1" x="457.35" y="416.06" width="1180.65" height="1176.62" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="4.65"/>
+      <feFlood flood-color="#000" flood-opacity=".9"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-2" x="1911.35" y="2272.06" width="1180.65" height="1176.62" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="4.65"/>
+      <feFlood flood-color="#000" flood-opacity=".9"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-7" width="3979" height="3979"/>
+  <polygon class="cls-22" points="1047.67 416.06 1111.03 628.72 1240.01 448.15 1230.88 669.86 1411.5 540.96 1330.88 747.7 1543.57 684.42 1400.19 853.78 1621.9 862.99 1431.3 976.62 1638 1057.32 1420.83 1102.91 1590.13 1246.35 1369.93 1218.95 1483.48 1409.6 1284.11 1312.18 1329.6 1529.36 1172.66 1372.49 1145.17 1592.68 1047.67 1393.35 950.18 1592.68 922.68 1372.49 765.75 1529.36 811.24 1312.18 611.87 1409.6 725.41 1218.95 505.21 1246.35 674.51 1102.91 457.35 1057.32 664.05 976.62 473.45 862.99 695.16 853.78 551.78 684.42 764.46 747.7 683.84 540.96 864.46 669.86 855.34 448.15 984.31 628.72 1047.67 416.06"/>
+  <text class="cls-5" transform="translate(775.32 925.8)"><tspan class="cls-30" x="0" y="0">A </tspan><tspan class="cls-33" x="157.99" y="0">F</tspan><tspan class="cls-26" x="254.37" y="0">U</tspan><tspan class="cls-11" x="380.76" y="0">L</tspan><tspan class="cls-30" x="470.26" y="0">L</tspan></text>
+  <text class="cls-3" transform="translate(681.38 1091.53)"><tspan class="cls-28" x="0" y="0">SE</tspan><tspan class="cls-20" x="211.08" y="0">R</tspan><tspan class="cls-12" x="329.1" y="0">V</tspan><tspan class="cls-14" x="456.58" y="0">I</tspan><tspan class="cls-28" x="514.64" y="0">CE</tspan></text>
+  <text class="cls-2" transform="translate(681.43 1188.89)"><tspan class="cls-31" x="0" y="0">DES</tspan><tspan class="cls-8" x="176.85" y="0">I</tspan><tspan class="cls-31" x="206.35" y="0">GN </tspan><tspan class="cls-18" x="362.27" y="0">A</tspan><tspan class="cls-25" x="427.75" y="0">GE</tspan><tspan class="cls-17" x="544.91" y="0">N</tspan><tspan class="cls-31" x="618.19" y="0">CY</tspan></text>
+  <line class="cls-6" x1="818.48" y1="765.47" x2="1289.22" y2="765.47"/>
+  <line class="cls-6" x1="831.38" y1="1227.17" x2="1302.12" y2="1227.17"/>
+  <polygon class="cls-23" points="2501.67 2272.06 2565.03 2484.72 2694.01 2304.15 2684.88 2525.86 2865.5 2396.96 2784.88 2603.7 2997.57 2540.42 2854.19 2709.78 3075.9 2718.99 2885.3 2832.62 3092 2913.32 2874.83 2958.91 3044.13 3102.35 2823.93 3074.95 2937.48 3265.6 2738.11 3168.18 2783.6 3385.36 2626.66 3228.49 2599.17 3448.68 2501.67 3249.35 2404.18 3448.68 2376.68 3228.49 2219.75 3385.36 2265.24 3168.18 2065.87 3265.6 2179.41 3074.95 1959.21 3102.35 2128.51 2958.91 1911.35 2913.32 2118.05 2832.62 1927.45 2718.99 2149.16 2709.78 2005.78 2540.42 2218.46 2603.7 2137.84 2396.96 2318.46 2525.86 2309.34 2304.15 2438.31 2484.72 2501.67 2272.06"/>
+  <text class="cls-4" transform="translate(2229.32 2718.8)"><tspan class="cls-29" x="0" y="0">A </tspan><tspan class="cls-32" x="152.72" y="0">F</tspan><tspan class="cls-29" x="245.88" y="0">U</tspan><tspan class="cls-10" x="368.06" y="0">L</tspan><tspan class="cls-24" x="454.57" y="0">L</tspan></text>
+  <text class="cls-4" transform="translate(2167.38 2860.53)"><tspan class="cls-29" x="0" y="0">SE</tspan><tspan class="cls-21" x="190.43" y="0">R</tspan><tspan class="cls-13" x="296.9" y="0">V</tspan><tspan class="cls-15" x="411.91" y="0">I</tspan><tspan class="cls-29" x="464.3" y="0">CE</tspan></text>
+  <text class="cls-4" transform="translate(2199.43 3005.93)"><tspan class="cls-29" x="0" y="0">DES</tspan><tspan class="cls-9" x="312.94" y="0">I</tspan><tspan class="cls-29" x="365.16" y="0">GN</tspan></text>
+  <text class="cls-1" transform="translate(2244.82 3121.41)"><tspan class="cls-19" x="0" y="0">A</tspan><tspan class="cls-27" x="89.5" y="0">GE</tspan><tspan class="cls-16" x="249.63" y="0">N</tspan><tspan class="cls-27" x="349.8" y="0">CY</tspan></text>
+</svg>
