@@ -11,3 +11,17 @@ document.querySelectorAll(".tab-checkbox").forEach((checkbox) => {
     }
   });
 });
+
+document.querySelectorAll(".pricing-checkbox").forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      document
+        .querySelectorAll(".pricing-checkbox")
+        .forEach((otherCheckbox) => {
+          if (otherCheckbox !== this) {
+            otherCheckbox.checked = false;
+          }
+        });
+    }
+  });
+});
