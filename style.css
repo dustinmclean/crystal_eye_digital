@@ -299,8 +299,6 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    
-    
 }
 
 .process-left {
@@ -309,12 +307,25 @@ nav {
     height: 100%;
 }
 
-
-
 .start-to-finish {
     height: 14vw;
     align-self: center;
 }
+
+.connect, .design, .develop, .launch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--main-background-color);
+    font-size: 3.5vh;
+    padding: 5px 1vw;
+}
+
+.brown-dots {
+    margin: -5px;
+}
+
+/* Styles For Process accordion */
 
 .tab-container {
     margin-right: 5vw;
@@ -384,38 +395,6 @@ nav {
 
 
 
-
-
-
-.pricing-right {
-    margin-right: 5vw;
-    display: grid;
-}
-
-
-
-.connect, .design, .develop, .launch {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--main-background-color);
-    font-size: 3.5vh;
-    padding: 5px 1vw;
-
-   
-}
-
-.launch {
-    border-bottom: 1px solid var(--main-background-color);
-}
-
-.plus-sign {
-    height: 50%;
-}
-
-.brown-dots {
-    margin: -5px;
-}
 
 /* -----------------------  Section 2  ------------------------------ */
 
@@ -533,6 +512,7 @@ nav {
 
 .pricing-right {
     margin: 9vh 6vw;
+    display: grid;
 }
 
 .per-project, .monthly, .hourly {
@@ -552,6 +532,72 @@ nav {
 .plus-sign2 {
     height: 2vw;
 }
+
+/* Accordion styles for Pricing Section */
+
+.pricing-tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pricing-tab input:checked ~ .pricing-tab-content {
+    max-height: 10rem;
+}
+
+.pricing-tab {
+    position: relative;
+    border-top: 1px solid var(--main-background-color);
+}
+
+.pricing-tab-label, .tab-close {
+    display: flex;
+    cursor: pointer;
+}
+
+.pricing-tab-label {
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: "Tan Nimbus";
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3vw;
+    
+}
+
+.pricing-tab-label::after {
+    font-family: Arial, Helvetica, sans-serif;
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.pricing-tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.pricing-tab input:checked + .pricing-tab-label::after {
+    transform: rotate(270deg);
+}
+
+.pricing-tab-content p {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.pricing-tab-close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0/75rem
+}
+
+
+
 
 /* Section 4 */
 
