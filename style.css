@@ -316,7 +316,78 @@ nav {
     align-self: center;
 }
 
-.process-right, .pricing-right {
+.tab-container {
+    margin-right: 5vw;
+    display: grid;
+}
+
+.tab {
+    position: relative;
+    border-top: 1px solid var(--main-background-color);
+}
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.tab input:checked ~ .tab-content {
+    max-height: 10rem;
+}
+
+.tab-label, .tab-close {
+    display: flex;
+    cursor: pointer;
+}
+
+.tab-label {
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    
+}
+
+.tab-label::after {
+    font-family: Arial, Helvetica, sans-serif;
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.tab input:checked + .tab-label::after {
+    transform: rotate(270deg);
+}
+
+.tab-content p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.tab-close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0/75rem
+}
+
+
+
+
+
+
+.pricing-right {
     margin-right: 5vw;
     display: grid;
 }
