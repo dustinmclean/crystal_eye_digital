@@ -25,3 +25,5 @@ document.querySelectorAll(".pricing-checkbox").forEach((checkbox) => {
     }
   });
 });
+
+console.log("crap your drawers");
