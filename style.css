@@ -791,6 +791,7 @@ footer {
 .primary-background2 {
     background-color: var(--main-background-color);
     height: 100%;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -804,7 +805,7 @@ footer {
 .main-background2 {
     background-color: var(--background-color);
     border-radius: 45px;
-    /* height: calc(100% - 80px); */
+    /* height: calc(100% - 80px);  */
     margin-top: 40px;
     margin-bottom: 40px;
     
@@ -855,19 +856,19 @@ footer {
     padding: 0 5vw;
 }
 
-.bar-white10 {
+.bar-white20 {
     
     width: 100%;
     background-color: var(--main-background-color);
     height: 1px;
 }
-.bar-white11 {
+.bar-white21 {
     width: 100%;
     background-color: var(--main-background-color);
     margin-top: 4px;
     height: 2px;
 }
-.bar-white12 {
+.bar-white22 {
     width: 100%;
     background-color: var(--main-background-color);
     margin-top: 4px;
@@ -879,8 +880,12 @@ footer {
 .portfolio-title-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 150px;
+    margin-top: 240px;
     padding: 0 10px;
+}
+
+.portfolio-title-text {
+    font-size: 1.3rem;
 }
 
 .portfolio-container {
@@ -892,9 +897,9 @@ footer {
     border-radius: 15px;
     margin-top: 10px;
     background: var(--background-color);
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
-    margin-bottom: 400px;
+    margin-bottom: 240px;
 }
 
 .description-container {
@@ -902,16 +907,24 @@ footer {
     padding: 26px 14px 14px 14px;
     /* outline: 1px solid var(--main-background-color); */
     /* outline-offset: -2px; */
-    border-radius: 0;
+    /* border-radius: 0; */
     border-right: 2px solid var(--main-background-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-
-
-
+.description-container2 {
+    margin: -26px -26px -26px 0;
+    padding: 26px 14px 14px 14px;
+    /* outline: 1px solid var(--main-background-color); */
+    /* outline-offset: -2px; */
+    /* border-radius: 0; */
+    border-left: 2px solid var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .description {
     text-indent: 3ch;
@@ -925,11 +938,147 @@ footer {
     object-fit: cover;
 }
 
-.image-container {
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--main-background-color);
+    margin: -15px -14px 24px -14px; 
+    padding: 0 14px 10px 14px;
     
-   
+}
+
+.color-blocks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.white-block {
+    background-color: var(--main-background-color);
+    height: 14px;
+    width: 14px;
+}
+.blue-block {
+    background-color: var(--blue-color);
+    height: 14px;
+    width: 14px;
+}
+.brown-block {
+    background-color: var(--brown-color);
+    height: 14px;
+    width: 14px;
+}
+
+/* ----------------------- About Page -------------------------- */
+
+
+.about-container {
+    display: grid; 
+    grid-template-columns: 600px 620px;
+    justify-content: center;
+    margin-top: 250px;
+    gap: 10px;
+}
+
+.about-left-side {
+    background-color: var(--brown-color);
+    height: 600px;
+    border-radius: 0 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about-right-side {
+    background-color: var(--main-background-color);
+    height: 600px;
+    border-radius: 0 100px 0 0;
+    display: flex;
+}
+
+.heading-container {
+    padding: 10px 14px 0px 10px;
+    margin: 0 0 -2px 0;
+}
+
+.heading-text {
+    text-align: right;
+    color: var(--background-color);
+    font-size: 3.7rem;
+}
+
+.bar-black30 {
+    width: 100%;
+    background-color: var(--background-color);
+    height: 9px;
+}
+
+.bar-black31 {
+    width: 100%;
+    background-color: var(--background-color);
+    height: 4px;
+    margin-top: 3px;
+}
+.bar-black32 {
+    width: 100%;
+    background-color: var(--background-color);
+    height: 2px;
+    margin-top: 3px;
+}
+
+.about-writeup {
+    padding: 30px;
+    color: var(--background-color);
+    margin-top: 40px;
    
 }
+
+.first-paragraph {
+    text-indent: 3ch;
+}
+
+.bar-brown30 {
+    height: 100%;
+    background-color: var(--brown-color);
+    width: 10px;
+    margin-left: 6px;
+}
+
+.bar-black33 {
+    height: 100%;
+    background-color: var(--background-color);
+    width: 6px;
+    margin-left: 6px;
+}
+
+.about-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-photo {
+    height: 70%;
+    width: auto;
+    border-radius: 0 45px 0 45px;
+}
+
+/* Footer for Pages */
+
+.footer-bars {
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
 
 
 
