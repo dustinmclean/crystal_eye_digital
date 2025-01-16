@@ -182,10 +182,11 @@ nav {
     display: flex; 
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .nav-logo {
-    height: 3.1vh;
+    height: clamp(20px, 2.5vw, 400px);
     width: auto;
 }
 
@@ -775,6 +776,17 @@ footer {
 
 /* Media Queries */
 
+/* @media (min-width: 1600px) {
+    .nav-logo {
+        height: 3.5vh;
+        width: auto;
+    }
+
+    .nav-item {
+        font-size: 1.2vw;
+    }
+}
+
 @media (min-width: 2000px) {
     .nav-logo {
         height: 4vh;
@@ -784,7 +796,8 @@ footer {
     .nav-item {
         font-size: 1.2vw;
     }
-}
+} */
+
 
 /* ------------------------------ Work (/pages/work.html) ----------------------- */
 
@@ -834,10 +847,10 @@ footer {
     justify-content: center;
 }
 
-.nav-logo {
+/* .nav-logo2 {
     height: 3.1vh;
     width: auto;
-}
+} */
 
 .nav-right2 {
     display: flex; 
@@ -976,10 +989,14 @@ footer {
 
 .about-container {
     display: grid; 
-    grid-template-columns: 600px 620px;
+    /* grid-template-columns: 600px 610px;  */
+    grid-template-columns: 1fr 1fr;
+    max-width: 1210px;
     justify-content: center;
-    margin-top: 250px;
+    /* margin-top: 250px; */
+    margin: 250px auto 0;
     gap: 10px;
+    padding: 20px;
 }
 
 .about-left-side {
@@ -1071,6 +1088,258 @@ footer {
 
 .footer-bars {
     margin-top: 200px;
+}
+
+/* -------------------  Contact Page ----------------------- */
+
+#main-contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    /* height: auto; */
+    margin: 250px auto 0;
+    padding: 0 2vw;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.contact-top {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    width: 100%;
+}
+
+.contact-left {
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-brown-dots {
+    max-height: 486px;
+    width: auto;
+    margin-bottom: -40px;
+}
+
+
+.contact-us-heading {
+    font-size: 3rem;
+}
+
+.contact-us-heading-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: -16px;
+}
+
+.white-block2 {
+    background-color: var(--main-background-color);
+    height: 20px;
+    width: 20px;
+}
+.blue-block2 {
+    background-color: var(--blue-color);
+    height: 20px;
+    width: 20px;
+}
+.brown-block2 {
+    background-color: var(--brown-color);
+    height: 20px;
+    width: 20px;
+}
+
+/* Contact Form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.contact-form div {
+    display: flex;
+}
+
+.message {
+    flex-direction: column;
+}
+
+.name-container, .email-container {
+    border-bottom: 3px solid var(--brown-color); 
+    margin-bottom: 30px;
+}
+
+/* Error Class */
+
+.name-container-error {
+    border-bottom: 3px solid rgb(188, 36, 92);
+}
+
+
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.message-section{
+    border: 3px solid var(--brown-color);
+    margin-bottom: 20px;
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: var(--main-background-color)
+}
+
+.message-error-border {
+    border: 3px solid rgb(188, 36, 92);
+}
+
+.label {
+    margin-right: 10px;
+}
+
+label {
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+input {
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: var(--main-background-color);
+    margin-bottom: 5px;
+    width: 100%;
+    
+}
+
+#name, #email, #message {
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--background-color);
+    outline: none;
+    resize: none;
+}
+
+#name, #email {
+    border: none;
+   
+}
+
+.main-submit-container {
+    align-self: flex-end;
+    border: none;
+}
+
+.submit-button2 {
+    display: inline-block;
+    border: 2px solid var(--brown-color);
+    background-color: transparent;
+    padding: 5px 10px;
+    color: var(--main-background-color);
+    font-size: 1.3rem;
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    transition: all .35s;
+}
+
+.submit-button2 span {
+    position: relative;
+    z-index: 2;
+}
+
+.submit-button2:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--blue-color);
+  z-index: 1;
+  transition: all .35s ease;
+}
+
+.submit-button2:hover {
+    color: var(--background-color);
+}
+
+.submit-button2:hover:after {
+    width: 100%;
+}
+
+/* */
+
+.brown-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--brown-color);
+    margin-top: 140px;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-heading {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    margin: 14px 0;
+}
+
+.info-text {
+    font-size: 0.9rem;
+}
+
+.error {
+    position: absolute;
+    margin-left: 260px;
+    color: rgb(188, 36, 92);
+    font-family: "PT Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.error-border {
+    border-bottom: 5px solid rgb(188, 36, 92);
+    border-top: 5px solid rgb(188, 36, 92);
+    background-color: rgb(188, 36, 92);
+}
+
+#success {
+    color: #66c27b;
+}
+
+.success-container {
+    margin: 20px auto 0;
 }
 
 
