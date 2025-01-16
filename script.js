@@ -72,8 +72,10 @@ function validateForm() {
   }
 
   if (!errorFlag) {
-    success.innerText = "Your message was successfully submitted!";
-    nameInput.innerText = "";
+    // success.innerText = "Your message was successfully submitted!";
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
 
     emailjs
       .send("service_8rfhzvw", "template_l02d47g", {
