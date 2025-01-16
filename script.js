@@ -32,10 +32,13 @@ console.log("crap your drawers");
 
 // Prevent Default and Call validateForm //
 
-document.getElementById("myForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  validateForm();
-});
+const myForm = document.getElementById("myForm");
+if (myForm) {
+  myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateForm();
+  });
+}
 
 // Query Selectors On Contact Form //
 
@@ -98,24 +101,30 @@ function validateForm() {
 
 // Clear Error Message in NAME CONTAINER //
 
-nameContainer.addEventListener("click", () => {
-  errorNodes[0].innerText = "";
-  nameContainer.classList.remove("name-container-error");
-});
+if (nameContainer) {
+  nameContainer.addEventListener("click", () => {
+    errorNodes[0].innerText = "";
+    nameContainer.classList.remove("name-container-error");
+  });
+}
 
 // Clear Error Messages in EMAIL CONTAINER //
 
-emailContainer.addEventListener("click", () => {
-  errorNodes[1].innerText = "";
-  emailContainer.classList.remove("name-container-error");
-});
+if (emailContainer) {
+  emailContainer.addEventListener("click", () => {
+    errorNodes[1].innerText = "";
+    emailContainer.classList.remove("name-container-error");
+  });
+}
 
 // Clear Error Messages in MESSAGE CONTAINER //
 
-messageSection.addEventListener("click", () => {
-  errorNodes[2].innerText = "";
-  messageSection.classList.remove("message-error-border");
-});
+if (messageSection) {
+  messageSection.addEventListener("click", () => {
+    errorNodes[2].innerText = "";
+    messageSection.classList.remove("message-error-border");
+  });
+}
 
 // Check Using A Regular Expression Pattern For Email Validation //
 
@@ -123,3 +132,13 @@ function emailIsValid(email) {
   let pattern = /\S+@\S+\.\S+/;
   return pattern.test(email);
 }
+
+// ----------------------  Hamburger Menu ---------------------//
+
+const hamburgerButton = document.querySelector(".hamburger");
+const hamburgerLinks = document.querySelector(".hamburger-links");
+
+hamburgerButton.addEventListener("click", () => {
+  hamburgerLinks.classList.toggle("active");
+  console.log("clicked");
+});
