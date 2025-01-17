@@ -140,5 +140,6 @@ const hamburgerLinks = document.querySelector(".hamburger-links");
 
 hamburgerButton.addEventListener("click", () => {
   hamburgerLinks.classList.toggle("active");
+  hamburgerButton.classList.toggle("active");
   console.log("clicked");
 });

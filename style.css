@@ -903,18 +903,31 @@ footer {
         width: auto;
     }
 
-    .hamburger-links {
-        /* display: flex; */
+    .hamburger-links-container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        display: none;
-        transition: 0.3s;
+    }
+
+    .hamburger-links {
         
+        /* display: none; */
+        left: -100%;
+        transition: all 0.3s;
+
+        
+       
     }
 
     .hamburger-links.active {
-        display: flex;
+        /* display: flex; */
+        display: block;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transition: all 1s;
+
         
     }
 
