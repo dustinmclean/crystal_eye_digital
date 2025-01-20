@@ -100,7 +100,7 @@ body {
     align-items: center;
     width: 100vw;
     /* overflow-x: hidden;  */
-    padding: 40px 40px 40px 40px;
+    padding: 40px 55px 40px 40px;
     box-sizing: border-box;
     z-index: -5;
 }
@@ -233,10 +233,10 @@ nav {
 
 .eye {
     position: absolute;
-    top: 54%;
-    left: 74.5%;
-    width: 2.2%;
-    height: 4%;
+    top: 53%;
+    left: 72.2%;
+    width: 3.8%;
+    height: 2.8%;
     background-color: none;
     border-radius: 50%;
     z-index: 6;
@@ -248,8 +248,8 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 35%;
-    height: 45%;
+    width: 18%;
+    height: 40%;
     background-color: #755330;
     border-radius: 50%;
     transform: translate(-50%, -50%);

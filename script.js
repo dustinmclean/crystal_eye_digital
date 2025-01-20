@@ -143,3 +143,63 @@ hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
   console.log("clicked");
 });
+
+// --------------------- Lighthouse Eye Mouse Follow -------------//
+
+const eye = document.querySelector(".eye");
+const pupil = document.querySelector(".pupil");
+const mainBackground = document.querySelector(".main-background");
+
+mainBackground.addEventListener("mousemove", (e) => {
+  const eyeBounds = eye.getBoundingClientRect();
+  const mainBounds = mainBackground.getBoundingClientRect();
+  // console.log(eyeBounds);
+
+  // Store client mouse positions //
+
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  // Calculate the center of the eye //
+
+  const centerX = eyeBounds.left + eyeBounds.width / 2;
+  const centerY = eyeBounds.top + eyeBounds.height / 2;
+
+  // Calculate the distance from the mouse to the center of the eye
+
+  const dx = mouseX - centerX;
+  const dy = mouseY - centerY;
+  const distanceToMouse = Math.sqrt(dx ** 2 + dy ** 2);
+
+  //Calculate the maximum possible distance based on the mainBackground
+  const maxPossibleDistance = Math.sqrt(
+    Math.pow(mainBounds.width, 2) + Math.pow(mainBounds.height, 2) / 2
+  );
+
+  // Normalize the distance to a value beween 0 and 1
+
+  const normalizedDistance = Math.min(distanceToMouse / maxPossibleDistance, 1);
+
+  // Calculate the maximum distance the pupil can move within the eye
+  const maxPupilDistance = eyeBounds.width / 2 - pupil.offsetWidth / 2;
+
+  // Scale the distance for the pupil based on the normalized distance
+  const pupilDistance = normalizedDistance * maxPupilDistance;
+
+  // Calculate the angle to position the pupil
+  const angle = Math.atan2(dy, dx);
+
+  // Determine the pupil's position
+  const pupilX =
+    centerX +
+    Math.cos(angle) * pupilDistance -
+    eyeBounds.left -
+    pupil.offsetWidth / 2;
+  const pupilY =
+    centerY +
+    Math.sin(angle) * pupilDistance -
+    eyeBounds.top -
+    pupil.offsetHeight / 2;
+
+  pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+});
