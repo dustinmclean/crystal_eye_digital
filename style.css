@@ -84,6 +84,10 @@ p {
 
 /* Global Styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     color: var(--main-background-color)
@@ -111,7 +115,7 @@ body {
     width: 100%;
     border-radius: 45px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 0;
 }
 
@@ -233,10 +237,10 @@ nav {
 
 .eye {
     position: absolute;
-    top: 53%;
+    top: 53.8%;
     left: 72.2%;
     width: 3.8%;
-    height: 2.8%;
+    height: 2.6%;
     background-color: none;
     border-radius: 50%;
     z-index: 6;
@@ -381,6 +385,8 @@ nav {
 
 .brown-dots {
     margin: -5px;
+    border-radius: 0 0 47px 47px;
+    padding: 0 5px 0 5px;
 }
 
 /* Styles For Process accordion */
@@ -663,7 +669,7 @@ nav {
     width: 100%;
     height: 70vh;
     overflow: hidden;
-    background-image: url("./images/landscapehalf.png");
+    background-image: url("./images/landscapehalf2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
