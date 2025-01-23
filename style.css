@@ -692,7 +692,9 @@ nav {
     font-size: 2.5rem;
 }
 
-.get-started-button {
+/* -------- Get Started Button Styling ------- */
+
+/* .get-started-button {
     background-color: var(--blue-color);
     border: none;
     font-family: "gamay", "sans-serif";
@@ -703,7 +705,51 @@ nav {
     padding: 4px 12px 10px 12px;
     border-radius: 20px;
     white-space: nowrap;
+} */
+
+.get-started-button {
+    display: inline-block;
+    border: 2px solid var(--blue-color);
+    background-color: var(--blue-color);
+    padding: 4px 12px 10px 12px;
+    color: var(--background-color);
+    font-family: "gamay", "sans-serif";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    transition: all .35s;
+    white-space: nowrap;
+}
+
+.get-started-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.get-started-button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--background-color);
+  z-index: 1;
+  transition: all .35s ease;
+}
+
+.get-started-button:hover {
+    color: var(--main-background-color);
     
+    
+}
+
+.get-started-button:hover:after {
+    width: 100%;
 }
 
 
@@ -779,7 +825,7 @@ nav {
 
 .section-4-container {
     width: 100%;
-    height: 70vh;
+    /* height: 70vh; */
     overflow: hidden;
     background-image: url("./images/landscapehalf2.png");
     background-size: cover;
@@ -800,8 +846,11 @@ nav {
 .testimonial-carousel {
     display: grid;
     gap: clamp(2vw, 9vw, 12vw);
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 30vh;
+    padding: 0 5vw 160px 5vw;
+    box-sizing: border-box;
 }
 
 .testimonial {
@@ -811,7 +860,7 @@ nav {
     align-items: center;
     padding: 18px;
     background-color: var(--main-background-color);
-    width: 15vw;
+    /* width: 15vw; */
     border-radius: 20px;
 }
 
@@ -959,7 +1008,7 @@ footer {
 
 /* Media Queries */
 
-/* -------------------  Media 2000px ----------------------*/
+/* -------------------  Media Queries ----------------------*/
 
 @media (min-width: 1600px) {
     .nav-logo {
@@ -970,6 +1019,27 @@ footer {
     .nav-item {
         font-size: 1.2vw;
     }
+
+    .testimonial-carousel {
+        display: grid;
+        gap: clamp(2vw, 9vw, 12vw);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 30vh;
+        /* height: 100vh; */
+        padding: 0 5vw 180px 5vw;
+        box-sizing: border-box;
+    }
+
+    .testimonial {
+        width: 15vw;
+    }
+
+    .section-4-container {
+        height: 70vh;
+    }
+
+    
 }
 
 @media (min-width: 2000px) {
@@ -981,6 +1051,43 @@ footer {
     .nav-item {
         font-size: 1.2vw;
     }
+
+    .pricing-definition {
+        line-height: 1.4;
+        font-size: 1.3rem;
+    }
+
+    .individual-bullet-container {
+        font-size: 1.3rem;
+        
+    }
+
+    .fine-print {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-carousel {
+        display: grid;
+        gap: clamp(2vw, 9vw, 12vw);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40vh;
+        /* height: 100vh; */
+        padding: 0 5vw 180px 5vw;
+        box-sizing: border-box;
+    }
+
+    .testimonial {
+        width: 15vw;
+    }
+
+    .section-4-container {
+        height: 90vh;
+    }
+
+    /* .section-4-container {
+        min-height: 70vh;
+    } */
 }
 
 /* -------------------  Media 950px ----------------------*/
@@ -1083,7 +1190,6 @@ footer {
 .primary-background2 {
     background-color: var(--main-background-color);
     height: 100%;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1139,12 +1245,12 @@ footer {
 }
 
 .recent-work-header {
-    padding: 120px 0 0 0;
+    padding: 200px 5vw 0 5vw;
     font-size: 4vw;
     line-height: 1;
 }
 
-.work-margins {
+.work-margins2 {
     padding: 0 5vw;
 }
 
@@ -1193,6 +1299,7 @@ footer {
     overflow: hidden;
     margin-bottom: 240px;
 }
+
 
 .description-container {
     margin: -26px 0 -26px -26px;
@@ -1261,6 +1368,26 @@ footer {
     background-color: var(--brown-color);
     height: 14px;
     width: 14px;
+}
+
+/* Media Queries for Portfolio Section */
+
+@media (max-width: 1810px) {
+
+    .portfolio-container {
+        
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid var(--main-background-color);
+        border-radius: 15px;
+        margin-top: 10px;
+        background: var(--background-color);
+        /* width: 100%; */
+        overflow: hidden;
+        margin-bottom: 240px;
+    }
+    
+    
+
 }
 
 /* ----------------------- About Page -------------------------- */
