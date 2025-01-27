@@ -176,7 +176,7 @@ nav {
 }
 
 .nav-item {
-    margin-right: 40px;
+    margin: 0 20px 0 20px;
 }
 
 .nav-left {
@@ -1483,7 +1483,7 @@ footer {
     height: 3px;
 }
 
-/* Portfolio Section */
+/* ----------------- Portfolio Section ----------- */
 
 .portfolio-title-container {
     display: flex;
@@ -1764,10 +1764,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     max-width: 1210px;
     justify-content: center;
+    grid-template-areas: "about photo";
     /* margin-top: 250px; */
     margin: 250px auto 0;
     gap: 10px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .about-left-side {
@@ -1776,8 +1777,16 @@ footer {
     border-radius: 0 0 0 100px;
     display: flex;
     flex-direction: column;
-    
 }
+
+.about-left-grid {
+    grid-area: about;
+}
+
+.about-right-grid {
+    grid-area: photo;
+}
+
 
 .about-right-side {
     background-color: var(--main-background-color);
@@ -2113,6 +2122,80 @@ input {
     margin: 20px auto 0;
 }
 
+/* -------------- Media 1200px ------------------- */
+
+@media (max-width: 1200px) {
+
+    .about-photo {
+        height: 60%;
+        width: auto;
+        border-radius: 0 45px 0 45px;
+    }
+    
+}
+
+/* -------------- Media 1030px ------------------- */
+
+@media (max-width: 1030px) {
+
+    .about-container {
+        display: grid; 
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "photo" "about";
+       
+        max-width: 1210px;
+        justify-content: center;
+        margin-top: 100px;
+        
+        gap: 10px;
+        padding: 40px;
+    }
+
+    
+
+    .about-left-side {
+        background-color: var(--brown-color);
+        height: 20vw;
+        border-radius: 45px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%
+        
+    }
+    
+    .about-right-side {
+        background-color: transparent;
+        height: 100%;
+        border-radius: 0;
+        display: flex;
+    }
+
+    .bar-brown30 {
+        display: none;
+    }
+
+    .about-photo {
+        height: 40vw;
+        width: auto;
+        border-radius: 0 45px 0 0px;
+        padding-bottom: 20px;
+    }
+
+    .about-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+
+
+
+
+/* -------------- Media 770px ------------------- */
 
 @media (max-width: 770px) {
     
@@ -2123,7 +2206,25 @@ input {
         margin-top: 30px;
     }
 
+    .hamburger-links {
+        
+        margin-top: 0.8rem;
+        
+    }
+
 }
+
+/* -------------- Media 400px ------------------- */
+
+@media (max-width: 400px) {
+
+    .heading-text {
+        font-size: 2.5rem;
+    }
+
+}
+
+
 
 
 
