@@ -62,24 +62,19 @@ function validateForm() {
     errorFlag = true;
   }
 
-  if (!emailIsValid(email.value)) {
+  if (!emailIsValid(emailInput.value)) {
     errorNodes[1].innerText = "Invalid email address";
     emailContainer.classList.add("name-container-error");
     errorFlag = true;
   }
 
-  if (message.value.length < 1) {
+  if (messageInput.value.length < 1) {
     errorNodes[2].innerText = "Message must not be blank";
     messageSection.classList.add("message-error-border");
     errorFlag = true;
   }
 
   if (!errorFlag) {
-    // success.innerText = "Your message was successfully submitted!";
-    nameInput.value = "";
-    emailInput.value = "";
-    messageInput.value = "";
-
     emailjs
       .send("service_8rfhzvw", "template_l02d47g", {
         name: nameInput.value,
@@ -90,6 +85,10 @@ function validateForm() {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           success.innerText = "Your message has been sent!";
+
+          nameInput.value = "";
+          emailInput.value = "";
+          messageInput.value = "";
         },
         (error) => {
           console.error("FAILED...", error);
@@ -150,56 +149,65 @@ const eye = document.querySelector(".eye");
 const pupil = document.querySelector(".pupil");
 const mainBackground = document.querySelector(".main-background");
 
-mainBackground.addEventListener("mousemove", (e) => {
-  const eyeBounds = eye.getBoundingClientRect();
-  const mainBounds = mainBackground.getBoundingClientRect();
-  // console.log(eyeBounds);
+if (eye && pupil && mainBackground) {
+  mainBackground.addEventListener("mousemove", (e) => {
+    const eyeBounds = eye.getBoundingClientRect();
+    const mainBounds = mainBackground.getBoundingClientRect();
+    // console.log(eyeBounds);
 
-  // Store client mouse positions //
+    // Store client mouse positions //
 
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-  // Calculate the center of the eye //
+    // Calculate the center of the eye //
 
-  const centerX = eyeBounds.left + eyeBounds.width / 2;
-  const centerY = eyeBounds.top + eyeBounds.height / 2;
+    const centerX = eyeBounds.left + eyeBounds.width / 2;
+    const centerY = eyeBounds.top + eyeBounds.height / 2;
 
-  // Calculate the distance from the mouse to the center of the eye
+    // Calculate the distance from the mouse to the center of the eye
 
-  const dx = mouseX - centerX;
-  const dy = mouseY - centerY;
-  const distanceToMouse = Math.sqrt(dx ** 2 + dy ** 2);
+    const dx = mouseX - centerX;
+    const dy = mouseY - centerY;
+    const distanceToMouse = Math.sqrt(dx ** 2 + dy ** 2);
 
-  //Calculate the maximum possible distance based on the mainBackground
-  const maxPossibleDistance = Math.sqrt(
-    Math.pow(mainBounds.width, 2) + Math.pow(mainBounds.height, 2) / 2
-  );
+    //Calculate the maximum possible distance based on the mainBackground
+    const maxPossibleDistance = Math.sqrt(
+      Math.pow(mainBounds.width, 2) + Math.pow(mainBounds.height, 2) / 2
+    );
 
-  // Normalize the distance to a value beween 0 and 1
+    // Normalize the distance to a value beween 0 and 1
 
-  const normalizedDistance = Math.min(distanceToMouse / maxPossibleDistance, 1);
+    const normalizedDistance = Math.min(
+      distanceToMouse / maxPossibleDistance,
+      1
+    );
 
-  // Calculate the maximum distance the pupil can move within the eye
-  const maxPupilDistance = eyeBounds.width / 2 - pupil.offsetWidth / 2;
+    // Calculate the maximum distance the pupil can move within the eye
+    const maxPupilDistance = eyeBounds.width / 2 - pupil.offsetWidth / 2;
 
-  // Scale the distance for the pupil based on the normalized distance
-  const pupilDistance = normalizedDistance * maxPupilDistance;
+    // Scale the distance for the pupil based on the normalized distance
+    const pupilDistance = normalizedDistance * maxPupilDistance;
 
-  // Calculate the angle to position the pupil
-  const angle = Math.atan2(dy, dx);
+    // Calculate the angle to position the pupil
+    const angle = Math.atan2(dy, dx);
 
-  // Determine the pupil's position
-  const pupilX =
-    centerX +
-    Math.cos(angle) * pupilDistance -
-    eyeBounds.left -
-    pupil.offsetWidth / 2;
-  const pupilY =
-    centerY +
-    Math.sin(angle) * pupilDistance -
-    eyeBounds.top -
-    pupil.offsetHeight / 2;
+    // Determine the pupil's position
+    const pupilX =
+      centerX +
+      Math.cos(angle) * pupilDistance -
+      eyeBounds.left -
+      pupil.offsetWidth / 2;
+    const pupilY =
+      centerY +
+      Math.sin(angle) * pupilDistance -
+      eyeBounds.top -
+      pupil.offsetHeight / 2;
 
-  pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-});
+    // Ensure the pupils stays within the boundaries of the eye
+    // pupilX = Math.max(Math.min(pupilX, maxPupilDistance), -maxPupilDistance);
+    // pupilY = Math.max(Math.min(pupilY, maxPupilDistance), -maxPupilDistance);
+
+    pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+  });
+}

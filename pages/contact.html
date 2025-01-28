@@ -6,13 +6,13 @@
     <title>Crystal Eye Digital</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://use.typekit.net/hkm7meb.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" href="/favicons/favicon.ico">
-    <link rel="icon" type="image/png" href="/favicons/favicon-dark-192x192.png" media="(prefers-color-scheme: dark)">
-    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="../favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" href="../favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="../favicons/favicon-dark-192x192.png" media="(prefers-color-scheme: dark)">
+    <link rel="manifest" href="../favicons/site.webmanifest">
     <script src="../script.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -21,8 +21,8 @@
 
 </head>
 <body>
-    <div class="primary-background2">
-        <div class="main-background2">
+    <div class="primary-background">
+        <div class="main-background">
             <nav>
                 <div>
                     <ul class="nav-left">
@@ -43,6 +43,23 @@
                 </div>
             </nav>
 
+            <!-- Actual Hamburger Icon Thingy -->
+            <div class="hamburger">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </div>
+
+            <!-- Separate Div Containing New Links For Dropdown -->
+            <div class="hamburger-links-container">
+                <div class="hamburger-links">
+                    <li class="nav-item2">home</li>
+                    <li class="nav-item2"><a href=../pages/work.html>work</a></li>
+                    <li class="nav-item2"><a href=../pages/about.html>about</a></li>
+                    <li class="nav-item2"><a href="../pages/contact.html">contact</a></li>
+                </div>
+            </div>
+
             <section id="main-contact-container">
                 <div class="contact-form-container">
                     <div class="contact-top">
@@ -53,7 +70,7 @@
                         <div class="contact-right">
                             <div class="contact-us-heading-container">
                                 <h2 class="contact-us-heading">contact us</h1>
-                                <div class="color-blocks-container">
+                                <div class="color-blocks-container2">
                                      <div class="white-block2"></div>
                                     <div class="blue-block2"></div>
                                     <div class="brown-block2"></div>
@@ -86,16 +103,13 @@
                                 <div class="success-container">
                                     <p id="success"></p>
                                 </div>
-
-                              
-    
                             </form>
                         </div>
                 </div>
                 <div class="information-container">
                     <div class="brown-line"></div>
                     <div class="text-wrapper">
-                        <div class="location-cpontainer">
+                        <div class="location-container">
                             <p class="info-heading">Location</p>
                             <p class="info-text">nanaimo, bc, canada</p>
                         </div>
