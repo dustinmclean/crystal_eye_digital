@@ -2183,9 +2183,9 @@ input {
     
 }
 
-/* -------------- Media 1135px ------------------- */
+/* -------------- Media 1230px ------------------- */
 
-@media (max-width: 1135px) {
+@media (max-width: 1230px) {
 
     .about-container {
         display: grid; 
