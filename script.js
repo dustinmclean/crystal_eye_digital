@@ -210,4 +210,10 @@ if (eye && pupil && mainBackground) {
 
     pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
   });
+
+  const resetPupil = () => {
+    pupil.style.transform = `translate(13px, 0px)`;
+  };
+
+  resetPupil();
 }

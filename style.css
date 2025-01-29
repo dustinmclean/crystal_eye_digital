@@ -256,14 +256,13 @@ nav {
 .eye {
     position: absolute;
     top: 53.8%;
-    left: 72.2%;
+    left: 72.1%;
     width: 3.8%;
     height: 2.6%;
     background-color: none;
     border-radius: 50%;
     z-index: 6;
 }
-
 
 
 .pupil {
@@ -518,8 +517,38 @@ nav {
     align-items: center;
 }
 
-.full-service-graphic {
-    height: 40vw;
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.star-graphic-container {
+    position: relative;
+    width: 105%;
+    height: 105%;
+}
+
+.star-graphic {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform 2s ease-in-out;
+}
+
+.star-graphic-text {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    
+}
+
+.star-graphic:hover {
+    animation: spin 4s linear infinite;
 }
 
 .middle-lines {
@@ -1783,10 +1812,12 @@ footer {
 
 .about-left-side {
     background-color: var(--brown-color);
-    height: 600px;
+    /* max-height: 680px; */
     border-radius: 0 0 0 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-left-grid {
@@ -1807,13 +1838,15 @@ footer {
 
 .heading-container {
     padding: 10px 14px 0px 10px;
-    margin: 0 0 -2px 0;
+    margin: 0 0 -2px auto;
+    
 }
 
 .heading-text {
     text-align: right;
     color: var(--background-color);
     font-size: 3.7rem;
+    
 }
 
 .bar-black30 {
@@ -1838,13 +1871,18 @@ footer {
 .about-writeup {
     padding: 30px;
     color: var(--background-color);
-    margin-top: 40px;
+    
+    /* margin-top: 15px; */
    
 }
 
-.first-paragraph {
+.first-paragraph, .paragraph {
     text-indent: 3ch;
+    font-size: 1rem;
 }
+
+
+
 
 .bar-brown30 {
     height: 100%;
@@ -2145,9 +2183,9 @@ input {
     
 }
 
-/* -------------- Media 1030px ------------------- */
+/* -------------- Media 1135px ------------------- */
 
-@media (max-width: 1030px) {
+@media (max-width: 1135px) {
 
     .about-container {
         display: grid; 
@@ -2200,6 +2238,12 @@ input {
         justify-content: center;
         align-items: center;
     }
+
+
+
+/* -------------- Media 1030px ------------------- */
+
+
 
     #main-contact-container {
         /* height: auto; */
@@ -2286,6 +2330,10 @@ input {
 
     .color-blocks-container2 {
         display: none;
+    }
+
+    .heading-text {
+        font-size: 2.5rem;
     }
 
 }
