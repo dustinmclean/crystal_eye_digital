@@ -110,8 +110,12 @@ body {
 }
 
 .main-background {
-    background-color: var(--background-color);
-    /* height: calc(100% - 80px); */
+    /* background-color: var(--background-color); */
+    background-image: url("./images/dark_halftone_background_big.png");
+    background-repeat: repeat;
+    background-size: 1000px 1000px;
+    background-position: top left;
+    background-attachment: fixed;
     width: 100%;
     border-radius: 45px;
     position: relative;
@@ -180,6 +184,10 @@ nav {
     margin: 0 20px 0 20px;
 }
 
+.nav-item:active {
+    color: #272726
+}
+
 .nav-left {
     display: flex;
     justify-content: center;
@@ -206,6 +214,32 @@ nav {
     display: flex; 
     gap: 5rem;
 }
+
+.nav-item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-hover-bar {
+    background-color: var(--blue-color);
+    width: calc(100% - 40px);
+    height: 8px;
+    position: absolute;
+    bottom: -10px;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+   
+}
+
+.nav-item-box:hover .nav-hover-bar {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
 
 /* Hero Section */
 
@@ -537,6 +571,7 @@ nav {
     width: 100%;
     position: absolute;
     transition: transform 2s ease-in-out;
+    z-index: 1;
 }
 
 .star-graphic-text {
@@ -544,11 +579,17 @@ nav {
     width: 100%;
     position: absolute;
     pointer-events: none;
-    
+    z-index: 10;
+}
+
+.star-graphic-text, .star-graphic {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .star-graphic:hover {
-    animation: spin 4s linear infinite;
+    animation: spin 6s linear infinite;
 }
 
 .middle-lines {
@@ -567,7 +608,24 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.full-service-container.show .star-graphic {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.full-service-container.show .star-graphic-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.full-service-container.show .services-list-container {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .list-items {
@@ -628,7 +686,12 @@ nav {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-image: url("./images/dark_halftone_background_big.png");
+    background-repeat: repeat;
+    background-size: 1000px 1000px;
+    background-position: top left;
+    background-attachment: fixed;
 }
 
 .pricing-definition {
@@ -2169,6 +2232,10 @@ input {
 
 .success-container {
     margin: 20px auto 0;
+}
+
+footer {
+    background-color: var(--background-color);
 }
 
 /* -------------- Media 1200px ------------------- */

@@ -28,6 +28,26 @@ document.querySelectorAll(".pricing-checkbox").forEach((checkbox) => {
 
 console.log("crap your drawers");
 
+// Full Service Slide In Effect Trigger //
+
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".full-service-container");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.classList.add("show");
+          observer.unobserve(section);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(section);
+});
+
 // -----------------------------   Contact Form   --------------------------- //
 
 // Prevent Default and Call validateForm //
