@@ -275,6 +275,10 @@ nav {
     animation: fadeInSlideDown 1s ease-in-out forwards;
 }
 
+.hero-text-mobile {
+    display: none;
+}
+
 @keyframes fadeInSlideDown {
     0% {
         opacity: 0;
@@ -389,6 +393,16 @@ nav {
     width: 100%;
     height: 15px;
     background-color: var(--main-background-color);
+}
+
+.bar-blue5 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--blue-color);
+}
+
+.border1-container-mobile {
+    display: none;
 }
 
 /* Process Container */
@@ -1454,6 +1468,13 @@ footer {
         background-color: var(--main-background-color);
     }
 
+    .hamburger.active .hamburger-bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg)
+    }
+    .hamburger.active .hamburger-bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg)
+    }
+
     .footer-link-styles {
         font-size: 0.9rem;
     }
@@ -2389,6 +2410,69 @@ footer {
     .vertical-brown-dots {
         max-height: 470px;
     }
+}
+
+/* -------------- Media 600px ------------------- */
+
+@media (max-width: 600px) {
+    .pupil {
+        display: none;
+    }
+
+    picture {
+        margin-top: 50px;
+    }
+
+    .hero-text {
+        display: none;
+    }
+
+    .hero-text-mobile {
+        display: block;
+        position: absolute;
+        top: -4%;
+        font-size: 2.5vw;
+        z-index: 3;
+        opacity: 0;
+        animation: fadeInSlideDown 1s ease-in-out forwards;
+        text-align: center;
+    }
+
+    .border1-container {
+        display: none;
+    }
+
+    .border1-container-mobile {
+        display: block;
+        height: auto;
+    }
+
+    .tab-label {
+        font-size: 3.5vw;
+    }
+
+    .process-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        margin-bottom: 2.2em;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .process-left {
+        margin-left: 5vw;
+        margin-top: 2vh;
+        height: 100%;
+    }
+
+    .tab-container {
+        margin: 5vw;
+        display: grid;
+    }
+
+    
 }
 
 /* -------------- Media 585px ------------------- */

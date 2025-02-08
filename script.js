@@ -26,8 +26,6 @@ document.querySelectorAll(".pricing-checkbox").forEach((checkbox) => {
   });
 });
 
-console.log("crap your drawers");
-
 // Full Service Slide In Effect Trigger //
 
 document.addEventListener("DOMContentLoaded", () => {
