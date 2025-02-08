@@ -586,7 +586,9 @@ nav {
     position: absolute;
     transition: transform 2s ease-in-out;
     z-index: 1;
+    
 }
+
 
 .star-graphic-text {
     height: 100%;
