@@ -293,9 +293,9 @@ nav {
 
 .eye {
     position: absolute;
-    top: 53.8%;
-    left: 72.1%;
-    width: 3.8%;
+    top: 53.9%;
+    left: 72.3%;
+    width: 3.6%;
     height: 2.6%;
     background-color: none;
     border-radius: 50%;
@@ -315,6 +315,7 @@ nav {
     z-index: 8;
     box-shadow: 0 0 80px 80px rgba(193, 158, 69, 0.1);
     animation: glowing 1.5s infinite;
+    transition: transform 0.3s ease-out;
 }
 
 @keyframes glowing {
@@ -1482,7 +1483,7 @@ footer {
     }
 
     .pricing-left {
-        margin: 4vh 60px;
+        margin: 4vh 40px 0;
         
     }
 
@@ -2003,6 +2004,9 @@ footer {
 .footer-bars {
     margin-top: 200px;
 }
+.footer-bars-about {
+    margin-top: 200px;
+}
 
 /* -------------------  Contact Page ----------------------- */
 
@@ -2389,6 +2393,10 @@ footer {
         grid-template-columns: 1fr 6fr;
     }
 
+    .about-container {
+        margin-bottom: -10vh;
+    }
+
 }
 
 /* -------------- Media 650px ------------------- */
@@ -2412,6 +2420,18 @@ footer {
     .vertical-brown-dots {
         max-height: 470px;
     }
+
+    .information-container {
+        margin-top: -4vh;
+    }
+
+    #main-contact-container {
+        margin-bottom: -12vh;
+    }
+
+    .portfolio-container {
+        margin-bottom: 10vh;
+    }
 }
 
 /* -------------- Media 600px ------------------- */
@@ -2421,8 +2441,16 @@ footer {
         display: none;
     }
 
-    picture {
-        margin-top: 50px;
+    /* picture {
+        margin-top: 4vh;
+    } */
+
+    /* .mobile-illustration {
+        margin-top: 20vh;
+    } */
+
+    .illustration {
+        margin-top: 3vh;
     }
 
     .hero-text {
@@ -2432,7 +2460,7 @@ footer {
     .hero-text-mobile {
         display: block;
         position: absolute;
-        top: -4%;
+        top: 2%;
         font-size: 2.5vw;
         z-index: 3;
         opacity: 0;
@@ -2497,7 +2525,7 @@ footer {
 
     #main-contact-container {
         /* height: auto; */
-        margin: 250px 0 0 0;
+        margin: 14vh 0 0 0;
         padding: 0 20px 0 20px;
     }
 
@@ -2514,6 +2542,10 @@ footer {
     .contact-top {
         grid-template-columns: 0fr 1fr;
        
+    }
+
+    .footer-bars {
+        margin-top: 5vh;
     }
 
 

@@ -165,7 +165,7 @@ hamburgerButton.addEventListener("click", () => {
 
 const eye = document.querySelector(".eye");
 const pupil = document.querySelector(".pupil");
-const mainBackground = document.querySelector(".main-background");
+const mainBackground = document.querySelector(".main-illustration-container");
 
 if (eye && pupil && mainBackground) {
   mainBackground.addEventListener("mousemove", (e) => {
@@ -222,16 +222,17 @@ if (eye && pupil && mainBackground) {
       eyeBounds.top -
       pupil.offsetHeight / 2;
 
-    // Ensure the pupils stays within the boundaries of the eye
-    // pupilX = Math.max(Math.min(pupilX, maxPupilDistance), -maxPupilDistance);
-    // pupilY = Math.max(Math.min(pupilY, maxPupilDistance), -maxPupilDistance);
+    pupil.style.transition = "none";
 
     pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
   });
 
   const resetPupil = () => {
-    pupil.style.transform = `translate(13px, 0px)`;
+    pupil.style.transition = "transform 0.3s ease-out";
+    pupil.style.transform = `translate(21px, 5px)`;
   };
+
+  mainBackground.addEventListener("mouseleave", resetPupil);
 
   resetPupil();
 }
