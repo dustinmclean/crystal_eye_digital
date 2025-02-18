@@ -229,7 +229,14 @@ if (eye && pupil && mainBackground) {
 
   const resetPupil = () => {
     pupil.style.transition = "transform 0.3s ease-out";
-    pupil.style.transform = `translate(21px, 5px)`;
+
+    if (window.innerWidth < 1300 && window.innerWidth > 770) {
+      pupil.style.transform = `translate(12px, 3px)`;
+    } else if (window.innerWidth < 770) {
+      pupil.style.transform = `translate(8px, 3px)`;
+    } else {
+      pupil.style.transform = `translate(21px, 5px)`;
+    }
   };
 
   mainBackground.addEventListener("mouseleave", resetPupil);
